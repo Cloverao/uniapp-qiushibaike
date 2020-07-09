@@ -1,0 +1,105 @@
+
+.u_flex{
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: flex;
+}
+.index-list{
+		padding:20rpx;
+		border-bottom:1rpx solid #EEEEEE;
+}
+.index-list1{
+		
+		-webkit-box-pack: justify;
+		
+		-webkit-justify-content: space-between;
+		
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+}
+.index-list2{
+		padding-top:15rpx;
+}
+.index-list3{
+		padding-top:15rpx;
+		position: relative;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		        justify-content: center;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+}
+.index-list-play{
+		position: absolute;
+		color:#FFFFFF;
+		font-size: 110rpx;
+}
+.index-list-playinfo{
+		position: absolute;
+		background-color: rgba(51,51,51,0.72);
+		color: #FFFFFF;
+		bottom: 8rpx;
+		right:8rpx;
+		border-radius: 40rpx;
+		font-size: 25rpx;
+		padding:0 10rpx;
+}
+.index-list4{
+		padding:15px 0;
+		
+		-webkit-box-pack: justify;
+		
+		-webkit-justify-content: space-between;
+		
+		        justify-content: space-between;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		        align-items: center;
+}
+.index-list1>view{
+
+		-webkit-box-align: center;
+
+		-webkit-align-items: center;
+
+		        align-items: center;
+		color: #999999;
+}
+.index-list1>view:first-child image{
+		width:90rpx;
+		height:90rpx;
+		border-radius: 90rpx;
+		margin-right: 10rpx;
+}
+.index-list1>view:last-child{
+	
+		-webkit-box-align: center;
+	
+		-webkit-align-items: center;
+	
+		        align-items: center;
+		background-color: #EEEEEE;
+		border-radius: 5rpx;
+		padding:0px 5px;
+		color: #333333;
+}
+.index-list3>image{
+		width:100%;
+		border-radius: 20rpx;
+}
+.index-list4>view{
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		        justify-content: space-between;
+		color: #999999;
+}
+.index-list4>view>view{
+		margin:0 3px;
+}
+.index-list4>view>view.active{
+		color: #09BB07;
+}
+

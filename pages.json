@@ -1,0 +1,214 @@
+{
+  "pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "uni-app",
+        "app-plus": {
+          "scrollIndicator": "none",
+          "titleNView": {
+            "buttons": [{
+              "color": "#ff9619",
+              "colorPressed": "#BBBBBB",
+              "float": "left",
+              "fontSize": "22px",
+              "fontSrc": "/static/iconfont/iconfont.ttf",
+              "text": "\ue609"
+            }, {
+              "color": "#000000",
+              "colorPressed": "#BBBBBB",
+              "float": "right",
+              "fontSize": "22px",
+              "fontSrc": "/static/iconfont/iconfont.ttf", //只有fang放在static下才会生效
+              "text": "\ue653"
+            }],
+            "searchInput": {
+              "align": "center",
+              "backgroundColor": "#f7f7f7",
+              "borderRadius": "4px",
+              "placeholder": "搜索糗事",
+              "placeholderColor": "#cccccc",
+              "disabled": true
+            }
+          }
+        }
+      }
+    }, {
+      "path": "pages/news/news",
+      "style": {
+        "app-plus": {
+          "titleNView": false
+        }
+      }
+    }, {
+      "path": "pages/paper/paper",
+      "style": {
+        "enablePullDownRefresh":true,//开启下拉刷新
+        "navigationBarTitleText":"小纸条",
+        "app-plus":{
+          "titleNView":{
+            "buttons":[
+              {
+                "color": "#000000",
+                "colorPressed": "#BBBBBB",
+                "float": "left",
+                "fontSize": "22px",
+                "fontSrc": "/static/iconfont/iconfont.ttf",
+                "text": "\ue845"
+              },{
+                "color": "#000000",
+                "colorPressed": "#BBBBBB",
+                "float": "right",
+                "fontSize": "22px",
+                "fontSrc": "/static/iconfont/iconfont.ttf",
+                "text": "\ue684"
+              }
+            ]
+          }
+        }
+      }
+    }, {
+      "path": "pages/home/home",
+      "style": {}
+    }, {
+      "path": "components/my/index-list/index-list",
+      "style": {}
+    }, {
+      "path": "components/my/swiper-tab-head/swiper-tab-head",
+      "style": {}
+    }, {
+      "path": "components/my/load-more/load-more",
+      "style": {}
+    }, {
+      "path": "components/my/no-thing/no-thing",
+      "style": {
+
+      }
+    }, {
+      "path": "pages/search/search",
+      "style": {
+        "navigationBarTitleText": "uni-app",
+        "app-plus": {
+          "scrollIndicator": "none",
+          "titleNView": {
+            "autoBackButton": false,
+            "buttons": [{
+              "color": "#000000",
+              "colorPressed": "#BBBBBB",
+              "float": "right",
+              "fontSize": "14px",
+              "text": "取消"
+            }],
+            "searchInput": {
+              "align": "center",
+              "backgroundColor": "#f7f7f7",
+              "borderRadius": "4px",
+              "placeholder": "搜索糗事",
+              "placeholderColor": "#cccccc",
+              "disabled": false
+            }
+          }
+        }
+      }
+    }, {
+      "path": "pages/add-input/add-input",
+      "style": {
+        // "navigationBarTitleText": "NavBar 导航栏",
+        // "navigationStyle": "custom",
+        // "enablePullDownRefresh": true,
+        "app-plus": {
+          "titleNView": false
+          // "bounce": "none",
+          // "pullToRefresh": {
+          // 	"style": "circle",
+          // 	"offset": "70px"
+          // }
+        }
+      }
+    }, {
+      "path": "components/my/upload-image/upload-image",
+      "style": {}
+    }
+      ,{
+            "path" : "components/my/common-list/common-list",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/my/news/news-nav-bar",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/my/news/topic-nav",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/my/news/topic-list",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/topic-nav/topic-nav",
+            "style" : {
+              "navigationBarTitleText":"话题分类",
+              "app-plus":{
+                "bounce":"none"
+              }
+            }
+        }
+        ,{
+            "path" : "pages/topic-detail/topic-detail",
+            "style" : {
+              "enablePullDownRefresh":true,//开启下拉刷新
+              "app-plus":{
+                "scrollIndicator":"none",//隐藏滚动条
+                "titleNView":{
+                  "type":"transparent", //设置渐变
+                  "buttons":[{
+                    "type":"menu"
+                  }]
+                }
+              }
+            }
+        }
+        ,{
+            "path" : "components/my/topic/topic-info",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/my/paper/paper-list",
+            "style" : {}
+        }
+    ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "仿糗事百科",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "tabBar": {
+    "color": "#ADADAD",
+    "selectedColor": "#FEE42A",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "糗事",
+      "iconPath": "static/tabbar/home.png",
+      "selectedIconPath": "static/tabbar/home-active.png"
+    }, {
+      "pagePath": "pages/news/news",
+      "text": "动态",
+      "iconPath": "static/tabbar/news.png",
+      "selectedIconPath": "static/tabbar/news-active.png"
+    }, {
+      "pagePath": "pages/paper/paper",
+      "text": "小纸条",
+      "iconPath": "static/tabbar/paper.png",
+      "selectedIconPath": "static/tabbar/paper-active.png"
+    }, {
+      "pagePath": "pages/home/home",
+      "text": "我的",
+      "iconPath": "static/tabbar/my.png",
+      "selectedIconPath": "static/tabbar/my-active.png"
+    }]
+  }
+}

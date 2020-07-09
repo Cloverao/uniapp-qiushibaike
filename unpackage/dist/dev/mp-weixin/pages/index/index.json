@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "uni-app",
+  "usingComponents": {
+    "index-list": "/components/my/index-list/index-list",
+    "swiper-tab-head": "/components/my/swiper-tab-head/swiper-tab-head",
+    "load-more": "/components/my/load-more/load-more",
+    "no-thing": "/components/my/no-thing/no-thing"
+  }
+}

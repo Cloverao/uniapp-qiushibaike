@@ -1,0 +1,135 @@
+
+.common-list {
+   padding: 20rpx;
+   box-sizing: border-box;
+}
+.common-list-l {
+   width: 90rpx;
+   height: 90rpx;
+   border-radius: 90rpx;
+   margin-right: 10rpx;
+   -webkit-flex-shrink: 0;
+           flex-shrink: 0;
+}
+.common-list-r {
+   -webkit-box-flex: 1;
+   -webkit-flex: 1;
+           flex: 1;
+   padding-bottom: 10rpx;
+   border-bottom: 1rpx solid #EEEEEE;
+}
+.common-list-l>image {
+   width: 100%;
+   border-radius: 100%;
+}
+.common-list-info {
+   height: 30rpx;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+           align-items: center;
+   color: #999999;
+}
+.common-list-info-age {
+   border-radius: 18rpx;
+   font-size: 18rpx;
+   padding: 0 10rpx;
+   margin-left: 10rpx;
+   background-color: #007AFF;
+   color: #FFFFFF;
+}
+.common-list-r>view:nth-child(1)>view:last-child {
+   background-color: #EEEEEE;
+   font-size: 25rpx;
+   padding: 0 10rpx;
+   border-radius: 5rpx;
+}
+.common-list-r>view:nth-child(2) {
+   font-size: 32rpx;
+   padding: 12rpx 0;
+}
+.common-list-r>view:nth-child(3) {
+   position: relative;
+}
+.common-list-play {
+   position: absolute;
+   color: #FFFFFF;
+   font-size: 110rpx;
+}
+.common-list-playinfo {
+   position: absolute;
+   background-color: rgba(51, 51, 51, 0.72);
+   color: #FFFFFF;
+   bottom: 8rpx;
+   right: 8rpx;
+   border-radius: 40rpx;
+   font-size: 25rpx;
+   padding: 0 10rpx;
+}
+.common-list-share {
+   background-color: #EEEEEE;
+   padding: 20rpx 10rpx;
+   font-size: 32rpx;
+   border-radius: 15rpx;
+}
+.common-list-share>image {
+   width: 180rpx;
+   height: 100rpx;
+   border-radius: 15rpx;
+   margin-right: 15rpx;
+}
+.common-list-r>view:nth-child(4) {
+   color: #999999;
+}
+.dianzan>view {
+   padding: 0 10rpx;
+   font-size: 28rpx;
+}
+.common-list-image {
+   width: 100%;
+}
+.common-list-image>image {
+   border-radius: 20rpx;
+   width: 100%;
+}
+
+
+.nav-left>view,
+.nav-right>view {
+  font-size: 40rpx;
+}
+.nav-left {
+  width: 80%;
+  color: #ff9619;
+}
+.nav-right {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+          justify-content: flex-end;
+}
+.nav-tab-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  width: 100%;
+}
+.nav-tab-bar view {
+  padding: 0 10rpx;
+  font-weight: bold;
+  color: #969696;
+}
+.active {
+  color: #333333 !important;
+}
+.nav-tab-bar view.active .nav-tab-bar-line {
+  border-bottom: 5rpx solid #FEDE33;
+  border-radius: 20rpx;
+  border-top: 5rpx solid #FEDE33;
+}
+
