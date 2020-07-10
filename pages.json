@@ -236,6 +236,10 @@
               }
             }
         }
+        ,{
+            "path" : "components/my/user-chart/user-chart-list",
+            "style" : {}
+        }
     ],
   "globalStyle": {
     "navigationBarTextStyle": "black",

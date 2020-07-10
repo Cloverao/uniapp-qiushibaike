@@ -1,47 +1,88 @@
 <template>
-  <view>
-    <view class="user-chat-bottom c_flex c_flex_j_sb">
-      <input type="text" placeholder="文明发言" />
-      <view class="icon iconfont icon-fabu u_flex_a_c u_flex_j_c"></view>
-    </view>
+  <view class="body">
+    <!--聊天列表-->
+    <block v-for="(item,index) in list" :key="index">
+      <user-chart-list :item="item" :index="index"></user-chart-list>
+    </block>
+    <!--输入框-->
+    <user-chart-buttom @submit="submit"></user-chart-buttom>
   </view>
 </template>
 
 <script>
+  import UserChartButtom from '@/components/my/user-chart/user-chart-bottom.vue'
+  import UserChartList from '@/components/my/user-chart/user-chart-list.vue'
+  import time from '@/common/time.js'
   export default {
+    components: {
+      UserChartButtom,
+      UserChartList
+    },
     data() {
       return {
-
+        text: "",
+        list: [{
+            isme: false,
+            userpic: '../../static/topicpic/1.jpeg',
+            type: "text",
+            data: '哈哈哈',
+            time: '1554970014'
+          },
+          {
+            isme: true,
+            userpic: '../../static/topicpic/2.jpeg',
+            type: "img",
+            data: '../../static/demo/3.jpg',
+            time: '1555146414'
+          }
+        ]
       }
     },
+    onLoad() {
+      this.getData();
+    },
     methods: {
-
+      submit(data) {
+        let now = new Date().getTime();
+        let obj =  {
+            'isme': true,
+            "userpic": '../../static/topicpic/2.jpeg',
+            "type": "text",
+            "data": data,
+            "time": now,
+            "gstime":time.gettime.getChatTime(now,this.list[this.list.length-1].time)
+          }
+          this.list.push(obj);
+      },
+      getData() {
+        let arr = [{
+            isme: false,
+            userpic: '../../static/topicpic/1.jpeg',
+            type: "text",
+            data: '哈哈哈',
+            time: '1555146412'
+          },
+          {
+            isme: true,
+            userpic: '../../static/topicpic/2.jpeg',
+            type: "img",
+            data: '../../static/demo/3.jpg',
+            time: '1555146414'
+          }
+        ];
+        for(let i = 0;i<arr.length;i++){
+           arr[i].gstime = time.gettime.getChatTime(arr[i].time,i>0?arr[i-1].time:0)
+        }
+        this.list = arr;
+      },
     }
   }
 </script>
 
 <style>
-  .user-chat-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20upx 0;
-    height: 100upx;
-    background-color: #FFFFFF;
-    border-top: 1upx solid;
-
+  .body {
+    padding: 0 20upx;
   }
 
-  .user-chat-bottom>input {
-    border: 1upx solid red;
-    flex: 1;
-    margin-right: 20upx;
-  }
-
-  .user-chat-bottom>view {
-    background-color: yellow;
-    width: 80upx;
-    font-size: 35upx;
-  }
+  
 </style>
