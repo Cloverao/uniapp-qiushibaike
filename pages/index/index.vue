@@ -86,12 +86,12 @@
           }
         ],
         list: [{
-            userpic: "../../../static/demo/userpic/12.jpg",
+            userpic: "../../static/demo/userpic/12.jpg",
             username: "wo是黄蓉",
             isguanzhu: false,
             title: "我是标题",
             type: "img",
-            titlepic: "../../../static/demo/datapic/11.jpg",
+            titlepic: "../../static/demo/datapic/11.jpg",
             infonum: {
               index: 0,
               dingnum: 11,
@@ -102,12 +102,12 @@
             share: 10
           },
           {
-            userpic: "../../../static/demo/userpic/12.jpg",
+            userpic: "../../static/demo/userpic/12.jpg",
             username: "wo是黄蓉",
             isguanzhu: false,
             title: "我是标题",
             type: "video",
-            titlepic: "../../../static/demo/datapic/11.jpg",
+            titlepic: "../../static/demo/datapic/11.jpg",
             infonum: {
               index: 1,
               dingnum: 11,
@@ -118,12 +118,12 @@
             share: 10
           },
           {
-            userpic: "../../../static/demo/userpic/12.jpg",
+            userpic: "../../static/demo/userpic/12.jpg",
             username: "wo是黄蓉",
             isguanzhu: false,
             title: "我是标题",
             type: "video",
-            titlepic: "../../../static/demo/datapic/11.jpg",
+            titlepic: "../../static/demo/datapic/11.jpg",
             infonum: {
               index: 1,
               dingnum: 11,

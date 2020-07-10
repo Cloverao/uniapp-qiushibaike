@@ -7,9 +7,10 @@
 	    <view class="c_flex c_flex_a_c c_flex_j_sb">
 	      <view class="common-list-info c_flex  ">
 	        {{item.username}}
-	        <view class="icon iconfont icon-nan common-list-info-age" 
+	        <!-- <view class="icon iconfont icon-nan common-list-info-age" 
 	        :class="[item.sex == 0?'icon-nan' : 'icon-nv']"
-	       > {{item.age}} </view>
+	       > {{item.age}} </view> -->
+         <tag-sex-age :sex="item.sex" :age="item.age"></tag-sex-age>
 	      </view>
 	      <view class="icon iconfont icon-zengjia" v-show="!isguanzhu"  @tap="guanzhu">关注</view>
 	
@@ -48,7 +49,11 @@
 </template>
 
 <script>
+   import TagSexAge from "@/components/my/common/tag-sex-age.vue"
 	export default {
+    components:{
+      TagSexAge
+    },
     props:{
       item:Object,
       index:Number
@@ -100,17 +105,11 @@
     height: 30upx;
     align-items: center;
     color: #999999;
+    margin-right: 10upx;
   }
 
 
-  .common-list-info-age {
-    border-radius: 18upx;
-    font-size: 18upx;
-    padding: 0 10upx;
-    margin-left: 10upx;
-    background-color: #007AFF;
-    color: #FFFFFF;
-  }
+ 
 
   .common-list-r>view:nth-child(1)>view:last-child {
     background-color: #EEEEEE;

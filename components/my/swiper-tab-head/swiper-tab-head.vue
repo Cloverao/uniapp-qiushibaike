@@ -3,6 +3,7 @@
 	    <scroll-view scroll-x class="uni-swiper-tab" :style="scrollStyle">
 	        <block v-for="(item,index) in  tabBars" :keys="index">
 	            <view class="swiper-tab-list" :class="{'active':tabIndex == index}" @tap="tabtap(index)" :style="scrollItemStyle">{{item.name}}
+              {{item.num ? item.num :''}}
 	            <view class="swiper-tab-line"></view>
 	            </view>
 	        </block>

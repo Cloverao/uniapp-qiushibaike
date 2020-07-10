@@ -1,5 +1,5 @@
 <template>
-	<view class="paper-list c_flex animated bounceInRight fast">
+	<view class="paper-list c_flex animated bounceInRight fast" @tap="opendetail">
 	  <image :src="item.userpic" mode="widthFix" lazy-load></image>
 	  <view>
 	    <view class="c_flex c_flex_j_sb">
@@ -37,7 +37,11 @@
 			}
 		},
 		methods: {
-			
+			opendetail(){
+        uni.navigateTo({
+          url:"../../../pages/user-chart/user-chart"
+        })
+      }
 		}
 	}
 </script>

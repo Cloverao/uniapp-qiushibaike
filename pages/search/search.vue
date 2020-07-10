@@ -13,7 +13,6 @@
 		},
         //监听原生标题按钮事件
         onNavigationBarButtonTap	(e){
-            console.log(e.index)
             if(e.index == 0) {
                 uni.navigateBack({
                     delta: 1

@@ -29,4 +29,7 @@
   .c_flex_j_c{
     justify-content: center;
   }
+  .c_flex_a_sb{
+  /* align-items: space-between; */
+  }
 </style>

@@ -177,6 +177,65 @@
             "path" : "components/my/paper/paper-list",
             "style" : {}
         }
+        ,{
+            "path" : "components/my/paper/paper-left-popup",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user-list/user-list",
+            "style" : {
+               "navigationBarTitleText":"好友列表",
+               "app-plus":{
+                 "titleNView":{
+                   "searchInput": {
+                     "align": "center",
+                     "backgroundColor": "#f7f7f7",
+                     "borderRadius": "4px",
+                     "placeholder": "搜索糗事",
+                     "placeholderColor": "#cccccc",
+                     "disabled": false
+                   },
+                   "buttons":[
+                     {
+                       "color": "#000000",
+                       "colorPressed": "#BBBBBB",
+                       "float": "right",
+                       "fontSize": "14px",
+                       "text": "取消"
+                     }
+                   ]
+                 }
+               }
+            }
+        }
+        ,{
+            "path" : "components/my/common/tag-sex-age",
+            "style" : {}
+        }
+        ,{
+            "path" : "components/my/user-list/user-list",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/user-chart/user-chart",
+            "style" : {
+              "navigationBarTitleText":"聊天页",
+              "app-plus":{
+                "titleNView":{
+                  "buttons":[
+                    {
+                      "color": "#000000",
+                      "colorPressed": "#BBBBBB",
+                      "float": "right",
+                      "fontSize": "22px",
+                      "fontSrc": "/static/iconfont/iconfont.ttf",
+                      "text": "\ue628"
+                    }
+                  ]
+                }
+              }
+            }
+        }
     ],
   "globalStyle": {
     "navigationBarTextStyle": "black",
