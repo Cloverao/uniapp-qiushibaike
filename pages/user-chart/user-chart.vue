@@ -1,9 +1,12 @@
 <template>
   <view class="body">
-    <!--聊天列表-->
-    <block v-for="(item,index) in list" :key="index">
-      <user-chart-list :item="item" :index="index"></user-chart-list>
-    </block>
+    <scroll-view scroll-y :scroll-top="scrollTop" :scroll-with-animation="true"
+    :style="{height:style.contentH+'px'}">
+      <!--聊天列表-->
+      <block v-for="(item,index) in list" :key="index">
+        <user-chart-list :item="item" :index="index"></user-chart-list>
+      </block>
+    </scroll-view>
     <!--输入框-->
     <user-chart-buttom @submit="submit"></user-chart-buttom>
   </view>
@@ -21,6 +24,10 @@
     data() {
       return {
         text: "",
+        scrollTop:0,
+        style:{
+          contentH:0
+        },
         list: [{
             isme: false,
             userpic: '../../static/topicpic/1.jpeg',
@@ -40,8 +47,18 @@
     },
     onLoad() {
       this.getData();
+      this.initdata();
     },
     methods: {
+      initdata(){
+        try{
+          const res = uni.getSystemInfoSync();
+          console.log(res)
+          this.style.contentH = res.windowHeight - uni.upx2px(120);
+        }catch(e){
+          
+        }
+      },
       submit(data) {
         let now = new Date().getTime();
         let obj =  {
