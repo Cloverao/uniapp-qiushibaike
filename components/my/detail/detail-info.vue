@@ -4,17 +4,22 @@
 	    <image :src="item.userpic" mode="widthFix" lazy-load></image>
 	  </view>
 	  <view class="common-list-r">
-	    <view class="c_flex c_flex_a_c c_flex_j_sb">
-	      <view class="common-list-info c_flex  ">
-	        {{item.username}}
-	        <!-- <view class="icon iconfont icon-nan common-list-info-age" 
-	        :class="[item.sex == 0?'icon-nan' : 'icon-nv']"
-	       > {{item.age}} </view> -->
-         <tag-sex-age :sex="item.sex" :age="item.age"></tag-sex-age>
-	      </view>
-	      <view class="icon iconfont icon-zengjia" v-show="!isguanzhu"  @tap="guanzhu">关注</view>
-	
-	    </view>
+	    <view>
+        <view class="c_flex c_flex_a_c c_flex_j_sb">
+          <view class="common-list-info c_flex  ">
+            {{item.username}}
+            <!-- <view class="icon iconfont icon-nan common-list-info-age" 
+            :class="[item.sex == 0?'icon-nan' : 'icon-nv']"
+           > {{item.age}} </view> -->
+           <tag-sex-age :sex="item.sex" :age="item.age"></tag-sex-age>
+          </view>
+          <view class="icon iconfont icon-zengjia" v-show="!isguanzhu"  @tap="guanzhu">关注</view>
+        	
+        </view>
+        <view class="common-list-r-time">
+          26天前
+        </view>
+      </view>
 	    <!--图片/视频-->
 	    <view>{{item.title}}</view>
 	    <view class="common-list-image c_flex c_flex_a_c c_flex_j_c" v-if="!item.share">
@@ -56,7 +61,6 @@
     },
     props:{
       item:Object,
-      index:Number
     },
 		data() {
 			return {
@@ -76,6 +80,17 @@
 	}
 </script>
 
-<style scoped>
+<style>
  @import "../../../common/list.css";
+ .common-list-r{
+   border-bottom: 0;
+ }
+ .common-list{
+   border-bottom: 1upx solid #EEEEEE;
+ }
+ .common-list-r-time{
+   padding:15upx 0;
+   color: #CCCCCC;
+   font-size: 25upx;}
+   
 </style>

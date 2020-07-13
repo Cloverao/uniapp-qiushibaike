@@ -87,6 +87,7 @@
     }, {
       "path": "pages/search/search",
       "style": {
+        "enablePullDownRefresh":true,
         "navigationBarTitleText": "uni-app",
         "app-plus": {
           "scrollIndicator": "none",
@@ -238,6 +239,29 @@
         }
         ,{
             "path" : "components/my/user-chart/user-chart-list",
+            "style" : {
+              
+              
+            }
+        },{
+          "path":"pages/detail/detail",
+          "style":{
+            "navigationBarTitleText":"内容页",
+            "app-plus":{
+              "scrollIndicator":"none",
+              "bounce":"none",
+              "titleNView":{
+                "buttons":[
+                  {
+                    "type":"menu"
+                  }
+                ]
+              }
+            }
+          }
+        }
+        ,{
+            "path" : "components/my/detail/detail-info",
             "style" : {}
         }
     ],

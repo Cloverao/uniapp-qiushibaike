@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="user-chart-item">
 		<view v-if="item.gstime" class="user-chart-time c_flex c_flex_j_c">{{item.gstime}}</view>
 		<view class="user-chart-list c_flex " :class="{'user-chart-me' : item.isme}">
 		  <image :src="item.userpic" mode="widthFix" lazy-load></image>

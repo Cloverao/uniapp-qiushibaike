@@ -1,6 +1,6 @@
 <template>
   <view class="body">
-    <scroll-view scroll-y :scroll-top="scrollTop" :scroll-with-animation="true"
+    <scroll-view id="scrollView" scroll-y :scroll-top="scrollTop" :scroll-with-animation="true"
     :style="{height:style.contentH+'px'}">
       <!--聊天列表-->
       <block v-for="(item,index) in list" :key="index">
@@ -26,7 +26,8 @@
         text: "",
         scrollTop:0,
         style:{
-          contentH:0
+          contentH:0,
+          itemH:0
         },
         list: [{
             isme: false,
@@ -49,11 +50,13 @@
       this.getData();
       this.initdata();
     },
+    onReady() {
+      this.pageToBottom();
+    },
     methods: {
       initdata(){
         try{
           const res = uni.getSystemInfoSync();
-          console.log(res)
           this.style.contentH = res.windowHeight - uni.upx2px(120);
         }catch(e){
           
@@ -70,6 +73,7 @@
             "gstime":time.gettime.getChatTime(now,this.list[this.list.length-1].time)
           }
           this.list.push(obj);
+          this.pageToBottom()
       },
       getData() {
         let arr = [{
@@ -91,6 +95,21 @@
            arr[i].gstime = time.gettime.getChatTime(arr[i].time,i>0?arr[i-1].time:0)
         }
         this.list = arr;
+      },
+      pageToBottom(){
+        debugger
+        let q= uni.createSelectorQuery();
+        q.select("#scrollView").boundingClientRect();
+        q.selectAll(".user-chart-item").boundingClientRect();
+        
+        q.exec((res)=>{
+          res[1].forEach((ret)=>{
+            this.style.itemH += ret.height;
+            if(this.style.itemH > this.style.contentH){
+              this.scrollTop = this.style.itemH
+            }
+          })
+        })
       },
     }
   }

@@ -80,7 +80,10 @@
                  }
             },
             opendetail(){
-                
+              console.log(1)
+                uni.navigateTo({
+                  url:"../../pages/detail/detail"
+                })
             },
 		}
 	}
